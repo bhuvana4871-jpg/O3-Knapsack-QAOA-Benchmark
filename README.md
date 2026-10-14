@@ -9,8 +9,18 @@ An interactive, responsive 0/1 knapsack solver and educational QAOA benchmark ba
 - Export the current problem as JSON.
 - Select a bag manually or load the optimal feasible combination.
 - Rank the five highest-value legal combinations for the current dataset.
+- Create custom binary optimization models with editable objective coefficients and linear constraints.
+- Use rule-based suggestions to help translate a written problem into a model template.
+- Solve and rank feasible assignments for models with up to 18 binary variables.
+- Save, reopen, and delete problem instances in a browser-local problem library.
 - Explore QUBO/QAOA concepts and the presentation's processor topology metrics.
 - Responsive dark research-console interface; no framework or build step required.
+
+## Problem Studio
+
+Open the **Problem studio** tab, describe the problem, review the suggested model, and edit the variable/objective list and constraints. Variables use `name, objective_value`, one per line. Constraints use `name:coefficient, name:coefficient <= limit`; `>=` and `=` are also supported. The solver maximizes the sum of selected objective coefficients subject to all listed constraints. The library is stored in browser `localStorage` on that device; it is not synchronized between browsers and can be cleared with browser storage.
+
+The statement helper is rule-based, not a general-purpose AI model generator. It cannot reliably infer complete mathematical formulations for scheduling, routing, or other arbitrary problem families. Review every variable, coefficient, and constraint before relying on a result.
 
 ## Run locally
 Open `index.html` in a modern browser. No installation or dependencies are required.
@@ -47,9 +57,9 @@ The custom-data optimizer enumerates subsets classically and exactly (up to 18 i
 
 ## GitHub Pages
 1. Open **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**.
-3. Select branch `main` and folder `/ (root)`, then save.
-4. After deployment completes, the site URL will appear on that settings page.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. The workflow at `.github/workflows/deploy-pages.yml` deploys the root static site when you push to `main`.
+4. Check the **Actions** tab for a successful `Deploy static app to GitHub Pages` run.
 
 ## License
 Add a license if you want to specify how others may reuse the project.
