@@ -14,6 +14,8 @@ An interactive, responsive 0/1 knapsack solver and educational QAOA benchmark ba
 - Solve and rank feasible assignments for models with up to 18 binary variables.
 - Save, reopen, and delete problem instances in a browser-local problem library.
 - Explore QUBO/QAOA concepts and the presentation's processor topology metrics.
+- Use the Simulation Lab to vary shots, assumed noise, and QAOA depth for an illustrative demo with estimated legal samples, best-bag hits, and nonlegal samples.
+- Vintage wedding-editorial palette: espresso, oxblood, dusty rose, antique champagne, parchment, and muted sage.
 - Responsive dark research-console interface; no framework or build step required.
 
 ## Problem Studio
@@ -53,7 +55,7 @@ You can also import an array of items directly; the current capacity is retained
 Capacity: **15**. The best legal combination is Items 1–4, with value **26** and weight **14**.
 
 ## Scientific scope
-The custom-data optimizer enumerates subsets classically and exactly (up to 18 items, or 262,144 subsets). The QUBO/QAOA panel is an educational explanation, and processor values are reported from the source presentation. This site does **not** execute Qiskit circuits or connect to real quantum hardware.
+The custom-data optimizer enumerates subsets classically and exactly (up to 18 items, or 262,144 subsets). The Simulation Lab uses a transparent illustrative formula seeded from the presentation-reported 95.9% legal-sample rate and 2.4% best-bag chance at p=2; it applies assumed-noise and depth adjustments to create demo estimates. These generated estimates are **not measured results** and are **not** a Qiskit simulation. The QUBO/QAOA panel is educational, and processor values are reported from the source presentation. This site does **not** execute Qiskit circuits or connect to real quantum hardware.
 
 ## GitHub Pages
 1. Open **Settings → Pages**.
